@@ -31,7 +31,6 @@ public class ClienteService {
             throw new OperacionInvalidaException("Parámetros de paginación no válidos: pagina >= 0 y tamanio entre 1 y 100.");
         }
         Sort.Direction dir = "desc".equalsIgnoreCase(direccion) ? Sort.Direction.DESC : Sort.Direction.ASC;
-        // "id" como desempate para que la paginación sea estable cuando hay valores repetidos
         Sort orden = Sort.by(dir, ordenarPor).and(Sort.by(Sort.Direction.ASC, "id"));
         PageRequest pageRequest = PageRequest.of(pagina, tamanio, orden);
 

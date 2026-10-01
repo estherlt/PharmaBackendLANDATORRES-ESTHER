@@ -34,16 +34,16 @@ public class DataSeeder implements CommandLineRunner {
         }
 
         if (clienteRepository.count() == 0) {
-            clienteService.crear(new ClienteRequestDTO("71234567", "Ana", "Quispe Rojas", "ana.quispe@example.com", "987654321", "Av. Los Álamos 123", true));
-            clienteService.crear(new ClienteRequestDTO("70112233", "Luis", "Fernández Vega", "luis.fernandez@example.com", null, null, true));
-            clienteService.crear(new ClienteRequestDTO("68899001", "María", "Torres Díaz", "maria.torres@example.com", "912345678", "Jr. Las Palmeras 456", true));
-            clienteService.crear(new ClienteRequestDTO("65544332", "Carlos", "Ramírez Soto", "carlos.ramirez@example.com", null, null, false));
-            for (int i = 1; i <= 12; i++) {
+            clienteService.crear(new ClienteRequestDTO("71234567", "Ana", "Quispe Rojas", "ana.quispe@gmail.com", "987654321", "Av. Los Álamos 123", true));
+            clienteService.crear(new ClienteRequestDTO("70112233", "Luis", "Fernández Vega", "luis.fernandez@gmail.com", null, null, true));
+            clienteService.crear(new ClienteRequestDTO("68899001", "María", "Torres Díaz", "maria.torres@gmail.com", "912345678", "Jr. Las Palmeras 456", true));
+            clienteService.crear(new ClienteRequestDTO("65544332", "Carlos", "Ramírez Soto", "carlos.ramirez@gmail.com", null, null, false));
+            for (int i = 1; i <= 3; i++) {
                 clienteService.crear(new ClienteRequestDTO(
-                        String.format("60000%03d", i),
+                        String.format("70430%03d", i),
                         "Cliente" + i,
                         "Apellido" + i,
-                        "cliente" + i + "@example.com",
+                        "cliente" + i + "@gmail.com",
                         null, null, true));
             }
         }
